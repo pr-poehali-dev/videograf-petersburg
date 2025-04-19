@@ -30,7 +30,7 @@ const Navbar = () => {
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center space-x-6">
-          {['Услуги', 'Портфолио', 'Обо мне', 'Контакты'].map((item) => (
+          {['Услуги', 'Обо мне', 'Контакты'].map((item) => (
             <a 
               key={item} 
               href={`#${item.toLowerCase()}`} 
@@ -39,9 +39,11 @@ const Navbar = () => {
               {item}
             </a>
           ))}
-          <Button className="bg-videographer-accent hover:bg-videographer-accent/80 text-white">
-            Связаться
-          </Button>
+          <a href="https://t.me/vocoders" target="_blank" rel="noopener noreferrer">
+            <Button className="bg-videographer-accent hover:bg-videographer-accent/80 text-white">
+              Связаться
+            </Button>
+          </a>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -57,7 +59,7 @@ const Navbar = () => {
       {isMobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 w-full bg-videographer-primary/95 backdrop-blur-md py-4 shadow-md animate-fadeIn">
           <nav className="container mx-auto px-4 flex flex-col space-y-4">
-            {['Услуги', 'Портфолио', 'Обо мне', 'Контакты'].map((item) => (
+            {['Услуги', 'Обо мне', 'Контакты'].map((item) => (
               <a 
                 key={item} 
                 href={`#${item.toLowerCase()}`} 
@@ -67,12 +69,18 @@ const Navbar = () => {
                 {item}
               </a>
             ))}
-            <Button 
-              className="bg-videographer-accent hover:bg-videographer-accent/80 text-white w-full"
+            <a 
+              href="https://t.me/vocoders" 
+              target="_blank" 
+              rel="noopener noreferrer"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Связаться
-            </Button>
+              <Button 
+                className="bg-videographer-accent hover:bg-videographer-accent/80 text-white w-full"
+              >
+                Связаться
+              </Button>
+            </a>
           </nav>
         </div>
       )}

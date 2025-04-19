@@ -51,9 +51,11 @@ const AboutSection = () => {
               </div>
             </div>
 
-            <Button className="bg-videographer-accent hover:bg-videographer-accent/80 text-white">
-              Связаться со мной
-            </Button>
+            <a href="https://t.me/vocoders" target="_blank" rel="noopener noreferrer">
+              <Button className="bg-videographer-accent hover:bg-videographer-accent/80 text-white">
+                Связаться со мной
+              </Button>
+            </a>
           </div>
         </div>
       </div>

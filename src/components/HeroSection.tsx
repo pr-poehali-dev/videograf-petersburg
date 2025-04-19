@@ -35,11 +35,17 @@ const HeroSection = () => {
           От съёмки до финального монтажа — всё в одних руках.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-slideUp">
-          <Button className="bg-videographer-accent hover:bg-videographer-accent/80 text-white px-8 py-6 text-lg">
-            Заказать съёмку
-          </Button>
-          <Button variant="outline" className="border-videographer-light text-videographer-light hover:bg-videographer-light/10 px-8 py-6 text-lg">
-            Смотреть портфолио
+          <a href="https://t.me/vocoders" target="_blank" rel="noopener noreferrer">
+            <Button className="bg-videographer-accent hover:bg-videographer-accent/80 text-white px-8 py-6 text-lg">
+              Заказать съёмку
+            </Button>
+          </a>
+          <Button 
+            variant="outline" 
+            className="border-videographer-light text-videographer-light hover:bg-videographer-light/10 px-8 py-6 text-lg"
+            onClick={scrollToServices}
+          >
+            Узнать подробнее
           </Button>
         </div>
       </div>

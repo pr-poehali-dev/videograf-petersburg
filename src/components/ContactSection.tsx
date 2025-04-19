@@ -1,7 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Smartphone, Mail, Send, MessageSquare } from "lucide-react";
+import { MessageSquare } from "lucide-react";
 
 const ContactSection = () => {
   return (
@@ -16,113 +14,33 @@ const ContactSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Contact Info */}
-          <div className="space-y-8">
-            <h3 className="text-2xl font-bold mb-6">Контактная информация</h3>
+        <div className="flex flex-col items-center justify-center space-y-8 max-w-xl mx-auto">
+          <div className="bg-videographer-light/5 p-8 rounded-lg shadow-lg text-center w-full">
+            <div className="flex items-center justify-center h-16 w-16 rounded-full bg-videographer-accent/20 mx-auto mb-4">
+              <MessageSquare className="h-8 w-8 text-videographer-accent" />
+            </div>
             
-            <p className="text-videographer-light/80 mb-8">
-              Свяжитесь со мной любым удобным для вас способом, и я отвечу в самое ближайшее время. 
-              Обсудим детали вашего проекта и создадим по-настоящему качественное видео.
+            <h3 className="text-2xl font-bold mb-4">Telegram</h3>
+            <p className="text-videographer-light/80 mb-6">
+              Для обсуждения проектов и заказов пишите мне в Telegram
             </p>
             
-            <div className="space-y-6">
-              <div className="flex items-center">
-                <div className="flex items-center justify-center h-12 w-12 rounded-full bg-videographer-accent/20 mr-4">
-                  <Smartphone className="h-6 w-6 text-videographer-accent" />
-                </div>
-                <div>
-                  <h4 className="text-lg font-semibold">Телефон</h4>
-                  <p className="text-videographer-light/80">+7 (812) 123-45-67</p>
-                </div>
-              </div>
-              
-              <div className="flex items-center">
-                <div className="flex items-center justify-center h-12 w-12 rounded-full bg-videographer-accent/20 mr-4">
-                  <Mail className="h-6 w-6 text-videographer-accent" />
-                </div>
-                <div>
-                  <h4 className="text-lg font-semibold">Email</h4>
-                  <p className="text-videographer-light/80">info@videographer-spb.ru</p>
-                </div>
-              </div>
-              
-              <div className="flex items-center">
-                <div className="flex items-center justify-center h-12 w-12 rounded-full bg-videographer-accent/20 mr-4">
-                  <MessageSquare className="h-6 w-6 text-videographer-accent" />
-                </div>
-                <div>
-                  <h4 className="text-lg font-semibold">Telegram</h4>
-                  <a 
-                    href="https://t.me/vocoders" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="text-videographer-accent hover:underline"
-                  >
-                    t.me/vocoders
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Contact Form */}
-          <div className="bg-videographer-light/5 p-8 rounded-lg shadow-lg">
-            <h3 className="text-2xl font-bold mb-6">Напишите мне</h3>
-            
-            <form className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <label htmlFor="name" className="text-sm font-medium">
-                    Имя
-                  </label>
-                  <Input 
-                    id="name" 
-                    placeholder="Ваше имя"
-                    className="bg-videographer-light/10 border-videographer-light/20 text-videographer-light placeholder:text-videographer-light/50"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <label htmlFor="email" className="text-sm font-medium">
-                    Email
-                  </label>
-                  <Input 
-                    id="email" 
-                    type="email" 
-                    placeholder="ваш@email.com"
-                    className="bg-videographer-light/10 border-videographer-light/20 text-videographer-light placeholder:text-videographer-light/50"
-                  />
-                </div>
-              </div>
-              
-              <div className="space-y-2">
-                <label htmlFor="subject" className="text-sm font-medium">
-                  Тема
-                </label>
-                <Input 
-                  id="subject" 
-                  placeholder="Тема сообщения"
-                  className="bg-videographer-light/10 border-videographer-light/20 text-videographer-light placeholder:text-videographer-light/50"
-                />
-              </div>
-              
-              <div className="space-y-2">
-                <label htmlFor="message" className="text-sm font-medium">
-                  Сообщение
-                </label>
-                <Textarea 
-                  id="message" 
-                  placeholder="Ваше сообщение"
-                  rows={5}
-                  className="bg-videographer-light/10 border-videographer-light/20 text-videographer-light placeholder:text-videographer-light/50"
-                />
-              </div>
-              
-              <Button className="w-full bg-videographer-accent hover:bg-videographer-accent/80 text-white">
-                <Send className="mr-2 h-4 w-4" /> Отправить сообщение
+            <a 
+              href="https://t.me/vocoders" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="inline-block"
+            >
+              <Button className="bg-videographer-accent hover:bg-videographer-accent/80 text-white">
+                Написать в Telegram
               </Button>
-            </form>
+            </a>
           </div>
+          
+          <p className="text-videographer-light/60 text-center max-w-md">
+            Свяжитесь со мной в Telegram, и я отвечу в самое ближайшее время. 
+            Обсудим детали вашего проекта и создадим по-настоящему качественное видео.
+          </p>
         </div>
       </div>
     </section>
